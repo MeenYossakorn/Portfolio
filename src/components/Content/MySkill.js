@@ -3,7 +3,7 @@ import React from "react";
 const MySkills = () => {
   return (
     <div className="bg-transparent text-white p-14 flex items-center justify-center  mb-4 mt-2 mt-4 min-h-screen">
-      <div className="grid grid-cols-2 gap-10 w-full max-w-4xl">
+      <div className="grid grid-cols-2 gap-10 w-full max-w-[1220px]">
         <div className="">
           {/* Left Section */}
           <div className="flex flex-col justify-center max-w-md">
@@ -95,7 +95,7 @@ const MySkills = () => {
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 lg:pl-8 mt-[185px] ml-16">
+        <div className="w-full lg:w-1/2 lg:pl-8 mt-[185px] ml-20">
           {/* Right Section */}
           <div className="flex flex-col justify-center max-w-md">
             <div className="mb-8">

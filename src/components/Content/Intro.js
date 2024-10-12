@@ -4,7 +4,7 @@ import meenPhotoshopHi from "../../assets/Images/Meenphotoshop3-Hi.png";
 const IntroSection = () => {
   return (
     <div className="bg-transparent text-white flex items-center justify-center min-h-screen">
-      <div className="max-w-[500px]">
+      <div className="max-w-[520px]">
         <p className="text-purple-500 mb-2 text-2xl font-roboto-mono font-bold">
           Hi, my name is
         </p>
