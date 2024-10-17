@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* background */
 body {
-    background-color: #031329; /* สีพื้นหลังที่ต้องการ */
+  background-color: #031329; /* color */
+  cursor: none;
+}
+
+/* font */
+@font-face {
+  font-family: "JetBrainsMonoMedium";
+  src: url("./assets/fonts/JetBrainsMono-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 4px; /* width scrollbar */
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* background color track scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b800ff; /* thumb color scrollbar */
+  border-radius: 2px; /*thumb border */
+  border: solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #cc46ff; /* hover color */
 }
