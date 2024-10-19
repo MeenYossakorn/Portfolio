@@ -2,11 +2,11 @@ import React from "react";
 
 const MyProject = () => {
   return (
-    <div>
-      <div className="w-full max-w-[1500px] mx-auto mt-40">
-        <div className="bg-transparent text-white p-4 flex flex-col items-center justify-start ">
+    <section id="Projects">
+      <div className="w-full max-w-[1500px] mx-auto ">
+        <div className="bg-transparent text-white p-14 flex flex-col items-center justify-start ">
           {/* Header Section */}
-          <div className="w-full max-w-[1220px] mb-4">
+          <div className="w-full max-w-[1220px] ">
             <h1 className="text-4xl font-roboto-mono font-bold text-white relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-[-3px] after:w-full after:h-0.5 after:bg-gradient-purple">
               PROJECT
             </h1>
@@ -29,20 +29,20 @@ const MyProject = () => {
           </div>
           {/* Auto Barrier Gate System Project */}
           <div className="bg-white rounded-3xl px-52 py-32 shadow-lg">
-            <img src="url" alt="" className="mb-4 rounded-md shadow-md" />
+            <img src="url" alt="" className="mb-2 rounded-md shadow-md" />
           </div>
           <div className="bg-white rounded-3xl px-52 py-32 shadow-lg">
-            <img src="url" alt="" className="mb-4 rounded-md shadow-md" />
+            <img src="url" alt="" className="mb-2 rounded-md shadow-md" />
           </div>
           <div className="bg-white rounded-3xl px-52 py-32 shadow-lg">
-            <img src="url" alt="" className="mb-4 rounded-md shadow-md" />
+            <img src="url" alt="" className="mb-2 rounded-md shadow-md" />
           </div>
           <div className="bg-white rounded-3xl px-52 py-32 shadow-lg">
-            <img src="url" alt="" className="mb-4 rounded-md shadow-md" />
+            <img src="url" alt="" className="mb-2 rounded-md shadow-md" />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
