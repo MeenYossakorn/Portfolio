@@ -35,3 +35,84 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #cc46ff; /* hover color */
 }
+
+/* None copy text */
+.no-select {
+  user-select: none; /* ปิดการเลือกข้อความ */
+  -webkit-user-select: none; /* สำหรับเบราว์เซอร์ที่ใช้ WebKit (เช่น Safari) */
+  -moz-user-select: none; /* สำหรับ Firefox */
+  -ms-user-select: none; /* สำหรับ Internet Explorer/Edge */
+}
+
+/* Animation */
+.IntroAnimation {
+  width: 100%; /* คุณสามารถปรับขนาดได้ตามที่ต้องการ */
+  z-index: 1;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+/* contact animation*/
+
+/*Right*/
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%); /* เริ่มจากนอกหน้าจอทางขวา */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* เลื่อนไปยังตำแหน่งปกติ */
+    opacity: 1;
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 1.5s ease-in-out forwards; /* ควบคุมเวลาและทิศทางการเคลื่อนไหว */
+}
+
+/*Left*/
+@keyframes slideInLeft2 {
+  0% {
+    transform: translateX(-100%); /* เริ่มจากนอกหน้าจอทางขวา */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* เลื่อนไปยังตำแหน่งปกติ */
+    opacity: 1;
+  }
+}
+
+.slide-in-left2 {
+  animation: slideInLeft2 1.5s ease-in-out forwards; /* ควบคุมเวลาและทิศทางการเคลื่อนไหว */
+}
+
+/*Left-MySkill*/
+
+.slide-in-left {
+  animation: slideInLeft 1.5s forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

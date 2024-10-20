@@ -2,15 +2,15 @@ import React from "react";
 
 const NavbarSection = () => {
   return (
-    <nav className="bg-opacity-95 navbar bg-BGBlue sticky top-0 z-50 shadow-md p-4 justify-center flex">
+    <nav className="sticky top-0 z-50 shadow-md p-4 justify-center flex backdrop-blur-lg bg-BGBlue/50">
       <div className="container flex justify-between items-center">
         <a
           href="#Intro"
-          className="font-roboto-mono font-semibold text-xl text-white transition duration-300 transform active:scale-95"
+          className="ml-[130px] font-roboto-mono font-semibold text-xl text-white transition duration-300 transform active:scale-95"
         >
           Portfolio
         </a>
-        <div className="space-x-10">
+        <div className="space-x-10 mr-[95px]">
           <a
             href="#AboutMe"
             className="font-roboto-mono font-semibold text-white transition duration-300 transform active:scale-95"

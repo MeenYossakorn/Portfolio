@@ -19,7 +19,7 @@ const MouseEffect = () => {
     <div className="cursor-none">
       {/* วงกลมเล็ก */}
       <div
-        className="fixed top-0 left-0 w-4 h-4 bg-white rounded-full pointer-events-none transition-transform duration-200 ease-out"
+        className="fixed top-0 left-0 w-4 h-4 bg-white rounded-full pointer-events-none transition-transform duration-400 ease-out"
         style={{
           transform: `translate(${position.x - 8}px, ${position.y - 8}px)`,
           zIndex: 60, // เพิ่ม z-index

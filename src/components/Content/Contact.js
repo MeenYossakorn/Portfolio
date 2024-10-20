@@ -1,22 +1,49 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import githubIcon from "../../assets/Images/github.png";
 import linkedinIcon from "../../assets/Images/linkedin.png";
 import mailIcon from "../../assets/Images/mail.png";
 
 const Contact = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const contactRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 } // ปรับค่า threshold เพื่อควบคุมเมื่อแอนิเมชันจะเริ่มทำงาน
+    );
+
+    if (contactRef.current) {
+      observer.observe(contactRef.current);
+    }
+
+    return () => {
+      if (contactRef.current) {
+        observer.unobserve(contactRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section id="Contact">
-      <div className="font-jetbrains-mono-medium bg-transparent text-white p-42 flex flex-col items-center justify-center min-h-screen">
+    <section id="Contact" ref={contactRef}>
+      <div
+        className={`font-jetbrains-mono-medium bg-transparent text-white p-42 flex flex-col items-center justify-center min-h-screen ${
+          isVisible ? "slide-in-right" : ""
+        }`}
+      >
         <h1 className="text-white text-3xl md:text-3xl mb-8">
           FEEL FREE TO CONTACT ME AND FOLLOW MY WORK AT
         </h1>
-        <div className="w-full  mt-2 flex flex-col items-center space-y-5 text-center">
+        <div className="mt-2 flex flex-col items-center space-y-5 text-center">
           {/* Mail Icon with Email */}
           <a
             href="mailto:meenyossakorn2546@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-full text-white ml-8 transition-transform duration-300 transform hover:scale-105 active:scale-95"
+            className="flex items-center justify-center w-full text-white ml-[30px] transition-transform duration-300 transform hover:scale-105 active:scale-95"
           >
             <div className="bg-transparent p-1 flex items-center justify-start">
               <img
@@ -35,7 +62,7 @@ const Contact = () => {
             href="https://linkedin.com/in/yossakorn-lengrabum"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-full text-white ml-[165px] transition-transform duration-300 transform hover:scale-105 active:scale-95"
+            className="flex items-center justify-center w-full text-white ml-[150px] transition-transform duration-300 transform hover:scale-105 active:scale-95"
           >
             <div className="bg-transparent p-1 flex items-center justify-start">
               <img
@@ -54,7 +81,7 @@ const Contact = () => {
             href="https://github.com/MeenYossakorn"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-full text-white transition-transform duration-300 transform hover:scale-105 active:scale-95"
+            className="flex items-center justify-center w-full text-white mr-[15px] transition-transform duration-300 transform hover:scale-105 active:scale-95"
           >
             <div className="bg-transparent p-1 flex items-center justify-start">
               <img

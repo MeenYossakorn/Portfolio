@@ -1,11 +1,41 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 const MySkills = () => {
+  const leftSectionRef = useRef(null);
+  const rightSectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("slide-in-left");
+          observer.unobserve(entry.target); // หยุดการสังเกต
+        }
+      });
+    });
+
+    if (leftSectionRef.current) {
+      observer.observe(leftSectionRef.current);
+    }
+    if (rightSectionRef.current) {
+      observer.observe(rightSectionRef.current);
+    }
+
+    return () => {
+      if (leftSectionRef.current) {
+        observer.unobserve(leftSectionRef.current);
+      }
+      if (rightSectionRef.current) {
+        observer.unobserve(rightSectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section id="Skill">
-      <div className="bg-transparent text-white p-14 flex items-center justify-center  mb-4 mt-40 min-h-screen">
+      <div className="bg-transparent text-white p-14 flex items-center justify-center mb-4 mt-12 min-h-screen">
         <div className="grid grid-cols-2 gap-10 w-full max-w-[1220px]">
-          <div className="">
+          <div ref={leftSectionRef} className="">
             {/* Left Section */}
             <div className="flex flex-col justify-center max-w-md">
               <h2 className="font-roboto-mono text-3xl font-semibold text-white mb-2">
@@ -24,7 +54,6 @@ const MySkills = () => {
                   Programming Language
                 </h3>
                 <div className="flex space-x-6 mb-4">
-                  {/* Placeholder for your logo */}
                   <div>
                     <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                       <img
@@ -70,7 +99,6 @@ const MySkills = () => {
               Frameworks \ Libraries
             </h3>
             <div className="flex space-x-6 mb-4">
-              {/* Placeholder for your logo */}
               <div className="flex flex-col items-center justify-center">
                 <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                   <img
@@ -136,7 +164,10 @@ const MySkills = () => {
             </div>
           </div>
 
-          <div className="w-full lg:w-1/2 lg:pl-8 mt-[150px] ml-20">
+          <div
+            ref={rightSectionRef}
+            className="w-full lg:w-1/2 lg:pl-8 mt-[150px] ml-20"
+          >
             {/* Right Section */}
             <div className="flex flex-col justify-center max-w-md">
               <div className="mb-8">
@@ -145,7 +176,6 @@ const MySkills = () => {
                   Tools
                 </h3>
                 <div className="flex space-x-6 mb-4">
-                  {/* Placeholder for your logo */}
                   <div className="flex flex-col items-center justify-center">
                     <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                       <img
@@ -185,15 +215,11 @@ const MySkills = () => {
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div>
-              {/* Database Section */}
-              <h3 className="font-roboto-mono text-lg font-semibold font-roboto text-white mb-4">
-                Databases
+              <h3 className="whitespace-nowrap font-roboto-mono text-lg font-semibold font-roboto text-white mb-4">
+                Database \ Version Control
               </h3>
-              <div className="flex space-x-6">
-                {/* Placeholder for your logo */}
+              <div className="flex space-x-6 mb-4">
                 <div>
                   <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                     <img
@@ -218,11 +244,22 @@ const MySkills = () => {
                     Firebase
                   </p>
                 </div>
+                <div>
+                  <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
+                    <img
+                      src="https://seeklogo.com/images/G/git-logo-CD8D6F1C09-seeklogo.com.png"
+                      alt="Firebase Icon"
+                      className="w-10 h-10"
+                    />
+                  </div>
+                  <p className="font-roboto text-white text-center mt-1">Git</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    
     </section>
   );
 };

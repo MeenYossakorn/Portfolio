@@ -5,7 +5,7 @@ const AboutMe = () => {
   return (
     <section id="AboutMe">
       <div>
-        <div className="flex items-center justify-center min-h-screen  text-white p-12 font-roboto scrollbar-hide mt-40">
+        <div className="flex items-center justify-center min-h-screen  text-white p-12 font-roboto scrollbar-hide mt-12">
           <div className="max-w-[1300px] bg-black bg-opacity-30 space-x-2 rounded-3xl p-8">
             <h1 className="text-3xl font-bold mb-4 font-roboto-mono">
               ABOUT ME
@@ -21,7 +21,7 @@ const AboutMe = () => {
                   self-improvement in this field, and I am eager to pursue an
                   internship in front-end development to further apply my
                   knowledge and advance my future career.
-                  <div className="relative mb-2 inline-block w-full h-0.5 bg-gradient-purple mt-6"></div>
+                  <div className="relative mb-2 inline-block w-full h-0.5 bg-gradient-purple mt-6 "></div>
                 </p>
 
                 <div className="flex items-start mt-4">

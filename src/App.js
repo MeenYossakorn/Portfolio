@@ -11,7 +11,7 @@ import AboutMe from "./components/Content/Aboutme";
 
 export default function App() {
   return (
-    <>
+    <div className="no-select">
       <NavbarSection />
       <MouseEffect />
       <IntroSection />
@@ -19,6 +19,6 @@ export default function App() {
       <MySkills />
       <MyProject />
       <Contact />
-    </>
+    </div>
   );
 }

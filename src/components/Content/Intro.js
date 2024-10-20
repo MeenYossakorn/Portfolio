@@ -19,19 +19,22 @@ const IntroSection = () => {
             professional experience. If you'd like to collaborate or learn more
             about my work, feel free to reach out!
           </p>
-          <button
-            className="group-hover:cursor-none bg-purple-600 hover:bg-purple-700 text-white font-bold font-jetbrains-mono-medium py-2 px-4 rounded-lg 
+          <a href="#Contact">
+            <button
+              className="group-hover:cursor-none bg-purple-600 hover:bg-purple-700 text-white font-bold font-jetbrains-mono-medium py-2 px-4 rounded-lg 
   transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95"
-          >
-            Contact Me
-          </button>
+            >
+              Contact Me
+            </button>
+          </a>
         </div>
+
         <div className="hidden md:block ml-48">
           <div className="bg-transparent p-1 w-80 h-50 flex items-center justify-center ">
             <img
               src={meenPhotoshopHi}
               alt="Yossakorn Lengrabum"
-              className="w-full max-w-[1000px] rounded-lg"
+              className="w-full max-w-[1000px] rounded-lg IntroAnimation"
             />
           </div>
         </div>
