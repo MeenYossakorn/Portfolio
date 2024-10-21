@@ -35,14 +35,6 @@ const MySkills = () => {
       observer.observe(rightSectionRef.current);
     }
 
-    return () => {
-      if (leftSectionRef.current) {
-        observer.unobserve(leftSectionRef.current);
-      }
-      if (rightSectionRef.current) {
-        observer.unobserve(rightSectionRef.current);
-      }
-    };
   }, []);
 
   return (
