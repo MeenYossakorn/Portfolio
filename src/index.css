@@ -70,34 +70,18 @@ body {
 
 /*Right*/
 @keyframes slideInRight {
-  0% {
+  from {
     transform: translateX(100%); /* เริ่มจากนอกหน้าจอทางขวา */
     opacity: 0;
   }
-  100% {
+  to {
     transform: translateX(0); /* เลื่อนไปยังตำแหน่งปกติ */
     opacity: 1;
   }
 }
 
 .slide-in-right {
-  animation: slideInRight 1.5s ease-in-out forwards; /* ควบคุมเวลาและทิศทางการเคลื่อนไหว */
-}
-
-/*Left*/
-@keyframes slideInLeft2 {
-  0% {
-    transform: translateX(-100%); /* เริ่มจากนอกหน้าจอทางขวา */
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0); /* เลื่อนไปยังตำแหน่งปกติ */
-    opacity: 1;
-  }
-}
-
-.slide-in-left2 {
-  animation: slideInLeft2 1.5s ease-in-out forwards; /* ควบคุมเวลาและทิศทางการเคลื่อนไหว */
+  animation: slideInRight 1.5s forwards; /* ควบคุมเวลาและทิศทางการเคลื่อนไหว */
 }
 
 /*Left-MySkill*/
@@ -115,4 +99,21 @@ body {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+/* Slide in project */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100%); /* เคลื่อนที่ไปทางขวา */
+  }
+  100% {
+    transform: translateX(0); /* กลับไปที่จุดเริ่มต้น */
+  }
+}
+
+.slide {
+  animation: slide 5s ease-in-out infinite; /* สามารถปรับความเร็วได้ที่นี่ */
 }

@@ -1,4 +1,6 @@
 import React from "react";
+import ABGSProject from "../../assets/Images/ABGS-Project.png"; // นำเข้าภาพด้วยชื่อใหม่ที่ไม่มี -
+import KMUNITYProject from "../../assets/Images/KMUNITY-Project.png"; // นำเข้าภาพด้วยชื่อใหม่ที่ไม่มี -
 
 const MyProject = () => {
   return (
@@ -22,23 +24,47 @@ const MyProject = () => {
 
       <div className="justify-center min-h-screen mx-auto">
         {/* Project Cards Section */}
-        <div className="justify-center mx-auto w-full max-w-[1500px] flex overflow-x-auto whitespace-nowrap space-x-4 scroll-snap-x-mandatory scrollbar-hide">
+        <div className="flex overflow-x-auto scrollbar-hide space-x-4 h-[400px] overflow-y-auto">
           {/* KMUNITY Project */}
-          <div className="bg-white rounded-3xl px-50 py-28 shadow-lg">
-            <img src="url" alt="" className="mb-4 rounded-md shadow-md" />
+          <div className="flex-none w-[600px]">
+            <img
+              src={KMUNITYProject} // ใช้ตัวแปรที่นำเข้ามา
+              alt="KMUNITY Project"
+              className="mb-2 rounded-md shadow-md w-full h-auto"
+            />
           </div>
           {/* Auto Barrier Gate System Project */}
-          <div className="bg-white rounded-3xl px-52 py-32 shadow-lg">
-            <img src="url" alt="" className="mb-2 rounded-md shadow-md" />
+          <div className="flex-none w-[600px]">
+            <img
+              src={ABGSProject} // ใช้ตัวแปรที่นำเข้ามา
+              alt="Auto Barrier Gate System Project"
+              className="mb-2 rounded-md shadow-md w-full h-auto"
+            />
           </div>
-          <div className="bg-white rounded-3xl px-52 py-32 shadow-lg">
-            <img src="url" alt="" className="mb-2 rounded-md shadow-md" />
+
+          {/* Add Project */}
+          <div className="flex-none w-[600px] bg-black">
+            <img
+              src="" // ใช้ตัวแปรที่นำเข้ามา
+              alt=""
+              className="mb-2 rounded-md shadow-md w-full h-auto bg-black"
+            />
           </div>
-          <div className="bg-white rounded-3xl px-52 py-32 shadow-lg">
-            <img src="url" alt="" className="mb-2 rounded-md shadow-md" />
+          {/* Add Project */}
+          <div className="flex-none w-[600px] bg-black">
+            <img
+              src="" // ใช้ตัวแปรที่นำเข้ามา
+              alt=""
+              className="mb-2 rounded-md shadow-md w-full h-auto bg-white"
+            />
           </div>
-          <div className="bg-white rounded-3xl px-52 py-32 shadow-lg">
-            <img src="url" alt="" className="mb-2 rounded-md shadow-md" />
+          {/* Add Project */}
+          <div className="flex-none w-[600px] bg-black">
+            <img
+              src="" // ใช้ตัวแปรที่นำเข้ามา
+              alt=""
+              className="mb-2 rounded-md shadow-md w-full h-auto bg-black"
+            />
           </div>
         </div>
       </div>

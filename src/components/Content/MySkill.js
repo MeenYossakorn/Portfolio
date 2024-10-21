@@ -1,18 +1,32 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const MySkills = () => {
+  const [isVisible, setIsVisible] = useState({
+    left: false,
+    right: false,
+  });
   const leftSectionRef = useRef(null);
   const rightSectionRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("slide-in-left");
-          observer.unobserve(entry.target); // หยุดการสังเกต
-        }
-      });
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === leftSectionRef.current) {
+            setIsVisible((prevState) => ({
+              ...prevState,
+              left: entry.isIntersecting,
+            }));
+          } else if (entry.target === rightSectionRef.current) {
+            setIsVisible((prevState) => ({
+              ...prevState,
+              right: entry.isIntersecting,
+            }));
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
     if (leftSectionRef.current) {
       observer.observe(leftSectionRef.current);
@@ -35,7 +49,12 @@ const MySkills = () => {
     <section id="Skill">
       <div className="bg-transparent text-white p-14 flex items-center justify-center mb-4 mt-12 min-h-screen">
         <div className="grid grid-cols-2 gap-10 w-full max-w-[1220px]">
-          <div ref={leftSectionRef} className="">
+          <div
+            ref={leftSectionRef}
+            className={`transition-all duration-500 ${
+              isVisible.left ? "slide-in-left" : ""
+            }`}
+          >
             {/* Left Section */}
             <div className="flex flex-col justify-center max-w-md">
               <h2 className="font-roboto-mono text-3xl font-semibold text-white mb-2">
@@ -46,14 +65,14 @@ const MySkills = () => {
                 efficient and modern solutions to users.
               </p>
             </div>
-
+            {/* Programming Language Section */}
             <div className="flex flex-col lg:flex-row justify-between w-full lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
               <div className="mb-8">
-                {/* Programming Language Section */}
-                <h3 className="font-roboto-mono text-lg font-semibold font-roboto text-white mb-4">
+                <h3 className="whitespace-nowrap font-roboto-mono text-lg font-semibold font-roboto text-white mb-4">
                   Programming Language
                 </h3>
                 <div className="flex space-x-6 mb-4">
+                  {/* HTML Icons */}
                   <div>
                     <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                       <img
@@ -66,6 +85,7 @@ const MySkills = () => {
                       HTML
                     </p>
                   </div>
+                  {/* CSS Icons */}
                   <div>
                     <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                       <img
@@ -78,6 +98,7 @@ const MySkills = () => {
                       CSS
                     </p>
                   </div>
+                  {/* Python Icons */}
                   <div>
                     <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                       <img
@@ -93,12 +114,12 @@ const MySkills = () => {
                 </div>
               </div>
             </div>
-
             {/* Frameworks/Libraries Section */}
             <h3 className="font-roboto-mono text-lg font-semibold font-roboto text-white mb-4">
               Frameworks \ Libraries
             </h3>
             <div className="flex space-x-6 mb-4">
+              {/* React Icons */}
               <div className="flex flex-col items-center justify-center">
                 <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                   <img
@@ -109,7 +130,7 @@ const MySkills = () => {
                 </div>
                 <p className="font-roboto text-white text-center mt-1">React</p>
               </div>
-
+              {/* Tailwind Icons */}
               <div className="flex flex-col items-center justify-center">
                 <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                   <img
@@ -122,7 +143,7 @@ const MySkills = () => {
                   TailwindCSS
                 </p>
               </div>
-
+              {/* MaterialUIIcons */}
               <div className="flex flex-col items-center justify-center">
                 <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                   <img
@@ -135,7 +156,7 @@ const MySkills = () => {
                   MaterialUI
                 </p>
               </div>
-
+              {/* DaisyUI Icons */}
               <div className="flex flex-col items-center justify-center">
                 <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                   <img
@@ -148,7 +169,7 @@ const MySkills = () => {
                   DaisyUI
                 </p>
               </div>
-
+              {/* Bootstrap Icons */}
               <div className="flex flex-col items-center justify-center">
                 <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                   <img
@@ -166,16 +187,18 @@ const MySkills = () => {
 
           <div
             ref={rightSectionRef}
-            className="w-full lg:w-1/2 lg:pl-8 mt-[150px] ml-20"
+            className={`w-full lg:w-1/2 lg:pl-8 mt-[150px] ml-20 transition-all duration-500 ${
+              isVisible.right ? "slide-in-left" : ""
+            }`}
           >
             {/* Right Section */}
             <div className="flex flex-col justify-center max-w-md">
               <div className="mb-8">
-                {/* Tools Section */}
                 <h3 className="font-roboto-mono text-lg font-semibold font-roboto text-white mb-4">
                   Tools
                 </h3>
                 <div className="flex space-x-6 mb-4">
+                  {/* Figma Icons */}
                   <div className="flex flex-col items-center justify-center">
                     <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                       <img
@@ -189,6 +212,7 @@ const MySkills = () => {
                     </p>
                   </div>
 
+                  {/* Canva Icons */}
                   <div className="flex flex-col items-center justify-center">
                     <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                       <img
@@ -201,6 +225,8 @@ const MySkills = () => {
                       Canva
                     </p>
                   </div>
+
+                  {/* Photoshop Icons */}
                   <div className="flex flex-col items-center justify-center">
                     <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                       <img
@@ -215,11 +241,11 @@ const MySkills = () => {
                   </div>
                 </div>
               </div>
-
               <h3 className="whitespace-nowrap font-roboto-mono text-lg font-semibold font-roboto text-white mb-4">
                 Database \ Version Control
               </h3>
               <div className="flex space-x-6 mb-4">
+                {/* MySQL Icons */}
                 <div>
                   <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                     <img
@@ -232,6 +258,7 @@ const MySkills = () => {
                     MySQL
                   </p>
                 </div>
+                {/* Firebase Icons */}
                 <div>
                   <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                     <img
@@ -244,6 +271,7 @@ const MySkills = () => {
                     Firebase
                   </p>
                 </div>
+                {/* Git Icons */}
                 <div>
                   <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
                     <img
@@ -259,7 +287,6 @@ const MySkills = () => {
           </div>
         </div>
       </div>
-    
     </section>
   );
 };
