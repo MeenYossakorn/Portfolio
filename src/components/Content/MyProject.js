@@ -1,6 +1,6 @@
 import React from "react";
-import ABGSProject from "../../assets/Images/ABGS-Project.png"; // นำเข้าภาพด้วยชื่อใหม่ที่ไม่มี -
-import KMUNITYProject from "../../assets/Images/KMUNITY-Project.png"; // นำเข้าภาพด้วยชื่อใหม่ที่ไม่มี -
+import ABGSProject from "../../assets/Images/ABGS-Project.png";
+import KMUNITYProject from "../../assets/Images/KMUNITY-Project.png";
 import UNIQLOProject from "../../assets/Images/UNIQLO-Project.png";
 
 const MyProject = () => {
@@ -23,32 +23,55 @@ const MyProject = () => {
         </div>
       </div>
 
-      <div className="justify-center min-h-screen mx-auto">
+      <div className="relative overflow-hidden h-[400px] ">
         {/* Project Cards Section */}
-        <div className="flex overflow-x-auto scrollbar-hide space-x-4 h-[400px] overflow-y-auto scroll-smooth">
+        <div className="flex w-[calc(600px*3)] animate-scroll space-x-6 hover:animate-pause mt-4">
           {/* KMUNITY Project */}
-          <div className="flex-none w-[600px]">
+          <div className="flex-none w-[500px] group ">
             <img
-              src={KMUNITYProject} // ใช้ตัวแปรที่นำเข้ามา
+              src={KMUNITYProject}
               alt="KMUNITY Project"
-              className="mb-2 rounded-md shadow-md w-full h-auto"
+              className=" rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
             />
           </div>
           {/* Auto Barrier Gate System Project */}
-          <div className="flex-none w-[600px]">
+          <div className="flex-none w-[500px] group">
             <img
-              src={ABGSProject} // ใช้ตัวแปรที่นำเข้ามา
+              src={ABGSProject}
               alt="Auto Barrier Gate System Project"
-              className="mb-2 rounded-md shadow-md w-full h-auto"
+              className=" rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
             />
           </div>
 
           {/* Uniqlo clone Project */}
-          <div className="flex-none w-[600px] ">
+          <div className="flex-none w-[500px] group">
             <img
-              src={UNIQLOProject} // ใช้ตัวแปรที่นำเข้ามา
-              alt=""
-              className="mb-2 rounded-md shadow-md w-full h-auto "
+              src={UNIQLOProject}
+              alt="Uniqlo Clone Project"
+              className=" rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
+            />
+          </div>
+
+          {/* Duplicate elements for looping effect */}
+          <div className="flex-none w-[500px] group">
+            <img
+              src={KMUNITYProject}
+              alt="KMUNITY Project"
+              className=" rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
+            />
+          </div>
+          <div className="flex-none w-[500px] group">
+            <img
+              src={ABGSProject}
+              alt="Auto Barrier Gate System Project"
+              className=" rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
+            />
+          </div>
+          <div className="flex-none w-[500px] group">
+            <img
+              src={UNIQLOProject}
+              alt="Uniqlo Clone Project"
+              className=" rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
             />
           </div>
         </div>

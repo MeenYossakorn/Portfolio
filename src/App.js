@@ -8,6 +8,7 @@ import MyProject from "./components/Content/MyProject";
 import Contact from "./components/Content/Contact";
 import MouseEffect from "./components/Mouse/MouseEffect";
 import AboutMe from "./components/Content/Aboutme";
+import ThankYouSection from "./components/Content/outro";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
       <MySkills />
       <MyProject />
       <Contact />
+      <ThankYouSection/>
     </div>
   );
 }

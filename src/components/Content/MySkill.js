@@ -34,12 +34,11 @@ const MySkills = () => {
     if (rightSectionRef.current) {
       observer.observe(rightSectionRef.current);
     }
-
   }, []);
 
   return (
     <section id="Skill">
-      <div className="bg-transparent text-white p-14 flex items-center justify-center mb-4 mt-12 min-h-screen">
+      <div className="bg-transparent text-white p-14 flex items-center justify-center   min-h-screen">
         <div className="grid grid-cols-2 gap-10 w-full max-w-[1220px]">
           <div
             ref={leftSectionRef}

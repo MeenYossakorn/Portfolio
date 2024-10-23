@@ -102,18 +102,35 @@ body {
 }
 
 /* Slide in project */
-@keyframes slide {
+@keyframes scroll {
   0% {
     transform: translateX(0);
   }
-  50% {
-    transform: translateX(100%); /* เคลื่อนที่ไปทางขวา */
-  }
   100% {
-    transform: translateX(0); /* กลับไปที่จุดเริ่มต้น */
+    transform: translateX(-50%);
   }
 }
 
-.slide {
-  animation: slide 5s ease-in-out infinite; /* สามารถปรับความเร็วได้ที่นี่ */
+.animate-scroll {
+  animation: scroll 15s linear infinite;
+}
+
+.animate-pause:hover {
+  animation-play-state: paused;
+}
+
+/* Slide up in outro */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 1.5s  forwards;
 }

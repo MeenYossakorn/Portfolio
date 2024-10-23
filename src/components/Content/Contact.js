@@ -20,11 +20,7 @@ const Contact = () => {
       observer.observe(contactRef.current);
     }
 
-    return () => {
-      if (contactRef.current) {
-        observer.unobserve(contactRef.current);
-      }
-    };
+
   }, []);
 
   return (
@@ -81,7 +77,7 @@ const Contact = () => {
             href="https://github.com/MeenYossakorn"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-full text-white mr-[15px] transition-transform duration-300 transform hover:scale-105 active:scale-95"
+            className="flex items-center justify-center w-full text-white mr-[15px] transition-transform duration-300 transform hover:scale-105 active:scale-95 "
           >
             <div className="bg-transparent p-1 flex items-center justify-start">
               <img
@@ -89,7 +85,7 @@ const Contact = () => {
                 alt="GitHub Icon"
                 className="w-10 h-10 rounded-lg"
               />
-              <span className="text-white text-xl md:text-lg ml-12">
+              <span className="text-white text-xl md:text-lg ml-12 ">
                 github.com/MeenYossakorn
               </span>
             </div>

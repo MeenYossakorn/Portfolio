@@ -25,8 +25,8 @@ const AboutMe = () => {
                 </p>
 
                 <div className="flex items-start mt-4">
-                  <div className="hidden md:block flex-1 ml-20">
-                    <div className="bg-transparent p-1 w-[250px] h-auto flex items-center justify-center">
+                  <div className="hidden md:block flex-1 ml-[70px]">
+                    <div className="bg-transparent p-1 w-[310px] h-auto flex items-center justify-center">
                       <img
                         src={meenPhotoshopMacbook}
                         alt="Yossakorn Lengrabum"
@@ -55,6 +55,24 @@ const AboutMe = () => {
                           Major - Electronics and Computer Engineering
                         </p>
                         <p className="text-sm font-roboto mt-2">GPA : 2.64</p>
+
+                        {/* Button section*/}
+                        <div className="mt-5">
+                          <a
+                            href="https://drive.google.com/file/d/16-hWWbwn16TMl7urZF9HV88QpxhMMr90/view?usp=sharing"
+                            className="group-hover:cursor-none bg-purple-600 hover:bg-purple-700 text-white  font-jetbrains-mono-medium py-2 px-4 rounded-lg 
+  transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95"
+                          >
+                            Resume
+                          </a>
+                          <a
+                            href="https://drive.google.com/file/d/1SeMM1y_j7eoKoO5n6dt3qDXo32NrCL-j/view?usp=sharing"
+                            className="group-hover:cursor-none bg-purple-600 hover:bg-purple-700 text-white font-jetbrains-mono-medium py-2 px-4 rounded-lg 
+  transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 ml-4"
+                          >
+                            Transcript
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
