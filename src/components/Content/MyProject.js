@@ -1,6 +1,7 @@
 import React from "react";
 import ABGSProject from "../../assets/Images/ABGS-Project.png"; // นำเข้าภาพด้วยชื่อใหม่ที่ไม่มี -
 import KMUNITYProject from "../../assets/Images/KMUNITY-Project.png"; // นำเข้าภาพด้วยชื่อใหม่ที่ไม่มี -
+import UNIQLOProject from "../../assets/Images/UNIQLO-Project.png";
 
 const MyProject = () => {
   return (
@@ -24,7 +25,7 @@ const MyProject = () => {
 
       <div className="justify-center min-h-screen mx-auto">
         {/* Project Cards Section */}
-        <div className="flex overflow-x-auto scrollbar-hide space-x-4 h-[400px] overflow-y-auto">
+        <div className="flex overflow-x-auto scrollbar-hide space-x-4 h-[400px] overflow-y-auto scroll-smooth">
           {/* KMUNITY Project */}
           <div className="flex-none w-[600px]">
             <img
@@ -42,28 +43,12 @@ const MyProject = () => {
             />
           </div>
 
-          {/* Add Project */}
-          <div className="flex-none w-[600px] bg-black">
+          {/* Uniqlo clone Project */}
+          <div className="flex-none w-[600px] ">
             <img
-              src="" // ใช้ตัวแปรที่นำเข้ามา
+              src={UNIQLOProject} // ใช้ตัวแปรที่นำเข้ามา
               alt=""
-              className="mb-2 rounded-md shadow-md w-full h-auto bg-black"
-            />
-          </div>
-          {/* Add Project */}
-          <div className="flex-none w-[600px] bg-black">
-            <img
-              src="" // ใช้ตัวแปรที่นำเข้ามา
-              alt=""
-              className="mb-2 rounded-md shadow-md w-full h-auto bg-white"
-            />
-          </div>
-          {/* Add Project */}
-          <div className="flex-none w-[600px] bg-black">
-            <img
-              src="" // ใช้ตัวแปรที่นำเข้ามา
-              alt=""
-              className="mb-2 rounded-md shadow-md w-full h-auto bg-black"
+              className="mb-2 rounded-md shadow-md w-full h-auto "
             />
           </div>
         </div>
