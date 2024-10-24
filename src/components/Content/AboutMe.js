@@ -1,7 +1,7 @@
 import React from "react";
 import meenPhotoshopMacbook from "../../assets/Images/Meenphotoshop2-macbook.png";
 
-const AboutMe = () => {
+const Aboutme = () => {
   return (
     <section id="AboutMe">
       <div>
@@ -90,4 +90,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default Aboutme;
