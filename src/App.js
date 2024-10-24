@@ -8,7 +8,7 @@ import MyProject from "./components/Content/MyProject";
 import Contact from "./components/Content/Contact";
 import MouseEffect from "./components/Mouse/MouseEffect";
 import ThankYouSection from "./components/Content/outro";
-import Aboutme from "./components/Content/Aboutme";
+import About from "./components/Content/About";
 
 export default function App() {
   return (
@@ -24,7 +24,7 @@ export default function App() {
       <NavbarSection />
       <MouseEffect />
       <IntroSection />
-      <Aboutme />
+      <About />
       <MySkills />
       <MyProject />
       <Contact />

@@ -1,9 +1,9 @@
 import React from "react";
 import meenPhotoshopMacbook from "../../assets/Images/Meenphotoshop2-macbook.png";
 
-const Aboutme = () => {
+const About = () => {
   return (
-    <section id="AboutMe">
+    <section id="Aboutme">
       <div>
         <div className="flex items-center justify-center min-h-screen  text-white p-12 font-roboto scrollbar-hide mt-12 relative">
           <div className="max-w-[1300px] bg-black bg-opacity-30 space-x-2 rounded-3xl p-8">
@@ -90,4 +90,4 @@ const Aboutme = () => {
   );
 };
 
-export default Aboutme;
+export default About;
