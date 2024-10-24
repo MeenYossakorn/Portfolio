@@ -12,7 +12,7 @@ import About from "./components/Content/About";
 
 export default function App() {
   return (
-    <div className="no-select ">
+    <div className="no-select w-full h-screen ">
       <div className="circle circle1"></div>
       <div className="circle circle2"></div>
       <div className="circle circle3"></div>

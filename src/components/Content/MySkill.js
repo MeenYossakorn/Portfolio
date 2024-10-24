@@ -178,7 +178,7 @@ const MySkills = () => {
 
           <div
             ref={rightSectionRef}
-            className={`w-full lg:w-1/2 lg:pl-8 mt-[150px] ml-20 transition-all duration-500 ${
+            className={`w-full lg:w-1/2 lg:pl-8 mt-[145px] ml-20 transition-all duration-500 ${
               isVisible.right ? "slide-in-left" : ""
             }`}
           >
