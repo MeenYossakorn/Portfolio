@@ -7,8 +7,9 @@ import MySkills from "./components/Content/MySkill";
 import MyProject from "./components/Content/MyProject";
 import Contact from "./components/Content/Contact";
 import MouseEffect from "./components/Mouse/MouseEffect";
-import AboutMe from "./components/Content/AboutMe";
 import ThankYouSection from "./components/Content/outro";
+import AboutMe from "./components/Content/Aboutme";
+
 
 export default function App() {
   return (

@@ -27,53 +27,95 @@ const MyProject = () => {
         {/* Project Cards Section */}
         <div className="flex w-[calc(600px*3)] animate-scroll space-x-6 hover:animate-pause mt-4">
           {/* KMUNITY Project */}
-          <div className="flex-none w-[500px] group ">
-            <img
-              src={KMUNITYProject}
-              alt="KMUNITY Project"
-              className=" rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
-            />
-          </div>
-          {/* Auto Barrier Gate System Project */}
-          <div className="flex-none w-[500px] group">
-            <img
-              src={ABGSProject}
-              alt="Auto Barrier Gate System Project"
-              className=" rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
-            />
-          </div>
+          <a
+            href="https://github.com/MeenYossakorn/Kmunity-Project.git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="flex-none w-[500px] group">
+              <img
+                src={KMUNITYProject}
+                alt="KMUNITY Project"
+                className="rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
+              />
+            </div>
+          </a>
 
-          {/* Uniqlo clone Project */}
-          <div className="flex-none w-[500px] group">
-            <img
-              src={UNIQLOProject}
-              alt="Uniqlo Clone Project"
-              className=" rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
-            />
-          </div>
+          {/* Auto Barrier Gate System Project */}
+          <a
+            href="https://github.com/MeenYossakorn/ABGS-Website-project.git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="flex-none w-[500px] group">
+              <img
+                src={ABGSProject}
+                alt="Auto Barrier Gate System Project"
+                className="rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
+              />
+            </div>
+          </a>
+
+          {/* Uniqlo Clone Project */}
+          <a
+            href="https://github.com/MeenYossakorn/Project-Flutter-Clone-App.git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="flex-none w-[500px] group">
+              <img
+                src={UNIQLOProject}
+                alt="Uniqlo Clone Project"
+                className="rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
+              />
+            </div>
+          </a>
 
           {/* Duplicate elements for looping effect */}
-          <div className="flex-none w-[500px] group">
-            <img
-              src={KMUNITYProject}
-              alt="KMUNITY Project"
-              className=" rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
-            />
-          </div>
-          <div className="flex-none w-[500px] group">
-            <img
-              src={ABGSProject}
-              alt="Auto Barrier Gate System Project"
-              className=" rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
-            />
-          </div>
-          <div className="flex-none w-[500px] group">
-            <img
-              src={UNIQLOProject}
-              alt="Uniqlo Clone Project"
-              className=" rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
-            />
-          </div>
+          {/* KMUNITY Project */}
+          <a
+            href="https://github.com/MeenYossakorn/Kmunity-Project.git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="flex-none w-[500px] group">
+              <img
+                src={KMUNITYProject}
+                alt="KMUNITY Project"
+                className="rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
+              />
+            </div>
+          </a>
+
+          {/* Auto Barrier Gate System Project */}
+          <a
+            href="https://github.com/MeenYossakorn/ABGS-Website-project.git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="flex-none w-[500px] group">
+              <img
+                src={ABGSProject}
+                alt="Auto Barrier Gate System Project"
+                className="rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
+              />
+            </div>
+          </a>
+
+          {/* Uniqlo Clone Project */}
+          <a
+            href="https://github.com/MeenYossakorn/Project-Flutter-Clone-App.git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="flex-none w-[500px] group">
+              <img
+                src={UNIQLOProject}
+                alt="Uniqlo Clone Project"
+                className="rounded-md shadow-md w-full h-auto transition-transform duration-300 transform group-hover:scale-105"
+              />
+            </div>
+          </a>
         </div>
       </div>
     </section>
