@@ -6,7 +6,7 @@ const NavbarSection = () => {
       <div className="container flex justify-between items-center">
         <a
           href="#Intro"
-          className="ml-[130px] font-roboto-mono font-semibold text-xl text-white transition duration-300 transform active:scale-95"
+          className="ml-[135px] font-roboto-mono font-semibold text-xl text-white transition duration-300 transform active:scale-95"
         >
           Portfolio
         </a>

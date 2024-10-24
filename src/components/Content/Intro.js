@@ -6,7 +6,7 @@ const IntroSection = () => {
     <section id="Intro">
       <div className="bg-transparent text-white flex items-center justify-center min-h-screen">
         <div className="max-w-[520px]">
-          <p className="text-purple-500 mb-2 text-2xl font-jetbrains-mono-medium font-bold">
+          <p className="text-purple-500 mb-2 text-2xl font-jetbrains-mono-medium font-bold relative">
             Hi, my name is
           </p>
           <h1 className="text-4xl font-bold mb-4 mt-2 font-roboto relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-[-10px] after:w-full after:h-0.5 after:bg-gradient-purple">

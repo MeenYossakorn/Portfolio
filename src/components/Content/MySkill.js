@@ -38,7 +38,7 @@ const MySkills = () => {
 
   return (
     <section id="Skill">
-      <div className="bg-transparent text-white p-14 flex items-center justify-center   min-h-screen">
+      <div className="bg-transparent text-white p-14 flex items-center justify-center min-h-screen relative mt-8">
         <div className="grid grid-cols-2 gap-10 w-full max-w-[1220px]">
           <div
             ref={leftSectionRef}
@@ -57,7 +57,7 @@ const MySkills = () => {
               </p>
             </div>
             {/* Programming Language Section */}
-            <div className="flex flex-col lg:flex-row justify-between w-full lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
+            <div className="flex flex-col lg:flex-row justify-between w-full lg:w-1/2 lg:pr-8 mb-8 lg:mb-0 ">
               <div className="mb-8">
                 <h3 className="whitespace-nowrap font-roboto-mono text-lg font-semibold font-roboto text-white mb-4">
                   Programming Language

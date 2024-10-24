@@ -7,7 +7,7 @@ const MyProject = () => {
   return (
     <section id="Projects">
       <div className="w-full max-w-[1500px] mx-auto ">
-        <div className="bg-transparent text-white p-14 flex flex-col items-center justify-start ">
+        <div className="bg-transparent text-white p-14 flex flex-col items-center justify-start relative ">
           {/* Header Section */}
           <div className="w-full max-w-[1220px] ">
             <h1 className="text-4xl font-roboto-mono font-bold text-white relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-[-3px] after:w-full after:h-0.5 after:bg-gradient-purple">
@@ -23,9 +23,9 @@ const MyProject = () => {
         </div>
       </div>
 
-      <div className="relative overflow-hidden h-[400px] ">
+      <div className="relative overflow-hidden h-[400px]  ">
         {/* Project Cards Section */}
-        <div className="flex w-[calc(600px*3)] animate-scroll space-x-6 hover:animate-pause mt-4">
+        <div className="flex w-[calc(600px*3)] animate-scroll space-x-6 hover:animate-pause mt-4 ">
           {/* KMUNITY Project */}
           <a
             href="https://github.com/MeenYossakorn/Kmunity-Project.git"

@@ -5,7 +5,7 @@ const AboutMe = () => {
   return (
     <section id="AboutMe">
       <div>
-        <div className="flex items-center justify-center min-h-screen  text-white p-12 font-roboto scrollbar-hide mt-12">
+        <div className="flex items-center justify-center min-h-screen  text-white p-12 font-roboto scrollbar-hide mt-12 relative">
           <div className="max-w-[1300px] bg-black bg-opacity-30 space-x-2 rounded-3xl p-8">
             <h1 className="text-3xl font-bold mb-4 font-roboto-mono">
               ABOUT ME
@@ -60,7 +60,7 @@ const AboutMe = () => {
                         <div className="mt-5">
                           <a
                             href="https://drive.google.com/file/d/16-hWWbwn16TMl7urZF9HV88QpxhMMr90/view?usp=sharing"
-                            className="group-hover:cursor-none bg-purple-600 hover:bg-purple-700 text-white  font-jetbrains-mono-medium py-2 px-4 rounded-lg 
+                            className="group-hover:cursor-none bg-purple-600 hover:bg-purple-700 text-white  font-jetbrains-mono-medium py-2 px-3 rounded-lg 
   transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -69,7 +69,7 @@ const AboutMe = () => {
                           </a>
                           <a
                             href="https://drive.google.com/file/d/1SeMM1y_j7eoKoO5n6dt3qDXo32NrCL-j/view?usp=sharing"
-                            className="group-hover:cursor-none bg-purple-600 hover:bg-purple-700 text-white font-jetbrains-mono-medium py-2 px-4 rounded-lg 
+                            className="group-hover:cursor-none bg-purple-600 hover:bg-purple-700 text-white font-jetbrains-mono-medium py-2 px-3 rounded-lg 
   transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 ml-4"
                             target="_blank"
                             rel="noopener noreferrer"
