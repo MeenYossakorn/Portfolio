@@ -12,15 +12,23 @@ const MySkills = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.target === leftSectionRef.current) {
+          if (
+            entry.target === leftSectionRef.current &&
+            entry.isIntersecting &&
+            !isVisible.left
+          ) {
             setIsVisible((prevState) => ({
               ...prevState,
-              left: entry.isIntersecting,
+              left: true,
             }));
-          } else if (entry.target === rightSectionRef.current) {
+          } else if (
+            entry.target === rightSectionRef.current &&
+            entry.isIntersecting &&
+            !isVisible.right
+          ) {
             setIsVisible((prevState) => ({
               ...prevState,
-              right: entry.isIntersecting,
+              right: true,
             }));
           }
         });
@@ -34,19 +42,23 @@ const MySkills = () => {
     if (rightSectionRef.current) {
       observer.observe(rightSectionRef.current);
     }
-  }, []);
+
+    return () => {
+      if (leftSectionRef.current) observer.unobserve(leftSectionRef.current);
+      if (rightSectionRef.current) observer.unobserve(rightSectionRef.current);
+    };
+  }, [isVisible.left, isVisible.right]);
 
   return (
     <section id="Skill">
-      <div className="bg-transparent text-white p-14 flex items-center justify-center min-h-screen relative mt-8">
-        <div className="grid grid-cols-2 gap-10 w-full max-w-[1220px]">
+      <div className="bg-transparent text-white  flex items-center justify-center max-h-screen  relative mt-40">
+        <div className="flex flex-col lg:flex-row gap-10 w-full max-w-[1220px]">
           <div
             ref={leftSectionRef}
             className={`transition-all duration-500 ${
               isVisible.left ? "slide-in-left" : ""
             }`}
           >
-            {/* Left Section */}
             <div className="flex flex-col justify-center max-w-md">
               <h2 className="font-roboto-mono text-3xl font-semibold text-white mb-2">
                 MY SKILL
@@ -56,6 +68,20 @@ const MySkills = () => {
                 efficient and modern solutions to users.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-transparent text-white  flex items-center justify-center relative ">
+        <div className="flex flex-col lg:flex-row gap-10 w-full max-w-[1220px]">
+          <div
+            ref={leftSectionRef}
+            className={`transition-all duration-500 ${
+              isVisible.left ? "slide-in-left" : ""
+            }`}
+          >
+            {/* Left Section */}
+
             {/* Programming Language Section */}
             <div className="flex flex-col lg:flex-row justify-between w-full lg:w-1/2 lg:pr-8 mb-8 lg:mb-0 ">
               <div className="mb-8">
@@ -178,7 +204,7 @@ const MySkills = () => {
 
           <div
             ref={rightSectionRef}
-            className={`w-full lg:w-1/2 lg:pl-8 mt-[145px] ml-20 transition-all duration-500 ${
+            className={`w-full lg:w-1/2 lg:pl-8 transition-all duration-500 ${
               isVisible.right ? "slide-in-left" : ""
             }`}
           >
@@ -238,7 +264,7 @@ const MySkills = () => {
               <div className="flex space-x-6 mb-4">
                 {/* MySQL Icons */}
                 <div>
-                  <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
+                  <div className="w-14 h-14 bg-gray-700 rounded-full flex flex-col items-center justify-center">
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/5968/5968313.png"
                       alt="MySQL Icon"
@@ -251,7 +277,7 @@ const MySkills = () => {
                 </div>
                 {/* Firebase Icons */}
                 <div>
-                  <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center">
+                  <div className="w-14 h-14 bg-gray-700 rounded-full flex flex-col items-center justify-center">
                     <img
                       src="https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png"
                       alt="Firebase Icon"

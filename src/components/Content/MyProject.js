@@ -7,7 +7,7 @@ const MyProject = () => {
   return (
     <section id="Projects">
       <div className="w-full max-w-[1500px] mx-auto ">
-        <div className="bg-transparent text-white p-14 flex flex-col items-center justify-start relative ">
+        <div className="bg-transparent text-white p-14 flex flex-col items-center justify-start relative mt-40 ">
           {/* Header Section */}
           <div className="w-full max-w-[1220px] ">
             <h1 className="text-4xl font-roboto-mono font-bold text-white relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-[-3px] after:w-full after:h-0.5 after:bg-gradient-purple">
