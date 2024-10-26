@@ -12,7 +12,7 @@ const About = () => {
             </h1>
             <div className="mt-4 px-2 sm:px-4 md:px-10">
               <div>
-                <p className="font-roboto text-[10px] sm:text-xs md:text-base">
+                <p className="font-roboto text-[12px] sm:text-xs md:text-base">
                   &nbsp;&nbsp; I am currently a 4th-year student majoring in
                   Computer and Electronics Engineering. I have a strong interest
                   and passion for front-end development, with expertise in UX/UI
@@ -45,16 +45,16 @@ const About = () => {
                         King Mongkut's University of Technology North Bangkok
                       </p>
 
-                      <p className="text-xs sm:text-sm md:text-base font-roboto">
+                      <p className="text-[10px] sm:text-sm md:text-base font-roboto">
                         2021 - Current
                       </p>
-                      <p className="text-xs sm:text-sm md:text-base font-roboto">
+                      <p className="text-[10px] sm:text-sm md:text-base font-roboto">
                         Faculty of College Of Industrial Technology (CIT)
                       </p>
-                      <p className="text-xs sm:text-sm md:text-base font-roboto">
+                      <p className="text-[10px] sm:text-sm md:text-base font-roboto">
                         Major - Electronics and Computer Engineering
                       </p>
-                      <p className="text-xs sm:text-sm md:text-base font-roboto">
+                      <p className="text-[10px] sm:text-sm md:text-base font-roboto">
                         GPA : 2.64
                       </p>
 
