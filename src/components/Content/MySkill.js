@@ -247,7 +247,7 @@ const MySkills = () => {
                         />
                       </div>
                       <p className="font-roboto text-xs sm:text-sm text-white text-center mt-1">
-                        PS
+                        PS6
                       </p>
                     </div>
                   </div>
