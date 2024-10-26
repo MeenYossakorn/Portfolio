@@ -6,13 +6,13 @@ const About = () => {
     <section id="AboutMe">
       <div>
         <div className="flex items-center justify-center min-h-screen text-white p-6 md:p-12 font-roboto scrollbar-hide mt-12 relative">
-          <div className="max-w-[1300px] bg-black bg-opacity-30 space-y-4 rounded-3xl p-6 md:p-8">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4 font-roboto-mono">
+          <div className="max-w-[470px] sm:max-w-[640px] md:max-w-[1300px] bg-black bg-opacity-30 space-y-4 rounded-3xl p-4 sm:p-6 md:p-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-roboto-mono">
               ABOUT ME
             </h1>
-            <div className="mt-4 px-4 md:px-10">
+            <div className="mt-4 px-2 sm:px-4 md:px-10">
               <div>
-                <p className="font-roboto text-sm md:text-base">
+                <p className="font-roboto text-[10px] sm:text-xs md:text-base">
                   &nbsp;&nbsp; I am currently a 4th-year student majoring in
                   Computer and Electronics Engineering. I have a strong interest
                   and passion for front-end development, with expertise in UX/UI
@@ -36,25 +36,25 @@ const About = () => {
                   </div>
 
                   <div className="flex-1 mt-4 md:mt-0 md:ml-8">
-                    <h2 className="text-2xl font-semibold font-roboto-mono mb-2 relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-[1px] after:w-full after:h-0.5 after:bg-gradient-purple">
+                    <h2 className="text-lg sm:text-2xl font-semibold font-roboto-mono mb-2 relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-[1px] after:w-full after:h-0.5 after:bg-gradient-purple">
                       EDUCATION
                     </h2>
 
                     <div className="mt-2">
-                      <p className="text-sm md:text-base font-roboto whitespace-nowrap overflow-x-auto">
+                      <p className="text-[10px] sm:text-xs md:text-base font-roboto whitespace-nowrap overflow-x-auto">
                         King Mongkut's University of Technology North Bangkok
                       </p>
 
-                      <p className="text-sm md:text-base font-roboto">
+                      <p className="text-xs sm:text-sm md:text-base font-roboto">
                         2021 - Current
                       </p>
-                      <p className="text-sm md:text-base font-roboto">
+                      <p className="text-xs sm:text-sm md:text-base font-roboto">
                         Faculty of College Of Industrial Technology (CIT)
                       </p>
-                      <p className="text-sm md:text-base font-roboto">
+                      <p className="text-xs sm:text-sm md:text-base font-roboto">
                         Major - Electronics and Computer Engineering
                       </p>
-                      <p className="text-sm md:text-base font-roboto">
+                      <p className="text-xs sm:text-sm md:text-base font-roboto">
                         GPA : 2.64
                       </p>
 

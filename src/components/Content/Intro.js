@@ -4,8 +4,8 @@ import meenPhotoshopHi from "../../assets/Images/Meenphotoshop3-Hi.png";
 const IntroSection = () => {
   return (
     <section id="Intro">
-      <div className="bg-transparent text-white flex items-center justify-center min-h-screen relative flex-col md:flex-row">
-        <div className="max-w-[520px] px-4">
+      <div className="bg-transparent text-white flex items-center justify-center min-h-screen relative flex-col md:flex-row pt-14">
+        <div className="max-w-[560px] px-4">
           <p className="text-purple-500 mb-2 text-xl md:text-2xl font-jetbrains-mono-medium font-bold relative">
             Hi, my name is
           </p>
