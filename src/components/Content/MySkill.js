@@ -207,7 +207,7 @@ const MySkills = () => {
             >
               <div className="flex flex-col justify-center max-w-md text-center sm:text-left">
                 <div className="mb-8">
-                  <h3 className="font-roboto-mono text-lg sm:text-xl font-semibold text-white mb-4">
+                  <h3 className=" font-roboto-mono text-lg sm:text-xl font-semibold text-white mb-4">
                     Tools
                   </h3>
                   <div className="flex justify-center sm:justify-start space-x-6 mb-4">
@@ -247,7 +247,7 @@ const MySkills = () => {
                         />
                       </div>
                       <p className="font-roboto text-xs sm:text-sm text-white text-center mt-1">
-                        Photoshop
+                        PS
                       </p>
                     </div>
                   </div>
