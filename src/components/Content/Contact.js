@@ -13,7 +13,7 @@ const Contact = () => {
         const entry = entries[0];
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.1 } // ปรับค่า threshold เพื่อควบคุมเมื่อแอนิเมชันจะเริ่มทำงาน
+      { threshold: 0.1 }
     );
 
     if (contactRef.current) {
@@ -30,11 +30,11 @@ const Contact = () => {
   return (
     <section id="Contact" ref={contactRef}>
       <div
-        className={`font-jetbrains-mono-medium bg-transparent text-white p-6 md:p-12 flex flex-col items-center justify-center min-h-screen mt-40 ${
+        className={`font-jetbrains-mono-medium bg-transparent text-white p-6 md:p-12 flex flex-col items-center justify-center min-h-screen mt-20 ${
           isVisible ? "slide-in-right" : ""
         }`}
       >
-        <h1 className="text-white text-3xl md:text-4xl mb-8 text-center">
+        <h1 className="text-white text-xl md:text-3xl mb-8 text-center">
           FEEL FREE TO CONTACT ME AND FOLLOW MY WORK AT
         </h1>
         <div className="mt-2 flex flex-col items-center space-y-5 text-center">
@@ -49,9 +49,9 @@ const Contact = () => {
               <img
                 src={githubIcon}
                 alt="GitHub Icon"
-                className="w-10 h-10 rounded-lg"
+                className="w-8 h-8 md:w-10 md:h-10 rounded-lg"
               />
-              <span className="text-white text-xl md:text-lg ml-4">
+              <span className="text-white text-sm md:text-lg ml-3">
                 github.com/MeenYossakorn
               </span>
             </div>
@@ -67,9 +67,9 @@ const Contact = () => {
               <img
                 src={mailIcon}
                 alt="Mail Icon"
-                className="w-10 h-10 rounded-lg"
+                className="w-8 h-8 md:w-10 md:h-10 rounded-lg"
               />
-              <span className="text-white text-xl md:text-lg ml-4">
+              <span className="text-white text-sm md:text-lg ml-3">
                 meenyossakorn2546@gmail.com
               </span>
             </div>
@@ -86,9 +86,9 @@ const Contact = () => {
               <img
                 src={linkedinIcon}
                 alt="LinkedIn Icon"
-                className="w-10 h-10 rounded-lg"
+                className="w-8 h-8 md:w-10 md:h-10 rounded-lg"
               />
-              <span className="text-white text-xl md:text-lg whitespace-nowrap overflow-hidden text-ellipsis ml-4">
+              <span className="text-white text-sm md:text-lg whitespace-nowrap overflow-hidden text-ellipsis ml-3">
                 linkedin.com/in/yossakorn-lengrabum
               </span>
             </div>

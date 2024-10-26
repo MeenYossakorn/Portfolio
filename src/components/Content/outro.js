@@ -17,12 +17,18 @@ const ThankYouSection = () => {
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
   }, []);
 
   return (
     <div
       ref={sectionRef}
-      className={` h-[700px] flex flex-col items-center justify-center h-screen bg-transparent text-white mt-2 transition-all duration-1000 ${
+      className={`flex flex-col items-center justify-center h-screen bg-transparent text-white mt-2 transition-all duration-1000 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
@@ -30,16 +36,21 @@ const ThankYouSection = () => {
       <img
         src={ThankYouImage}
         alt="Thank You"
-        className="bg-transparent p-1 w-60 flex items-center justify-center "
+        className="bg-transparent p-1 w-48 md:w-60 flex items-center justify-center" // ปรับขนาดภาพให้เล็กลง
       />
 
       {/* Text */}
-      <div className="text-center mt-14">
-        <p className="text-white text-3xl md:text-3xl font-jetbrains-mono-medium  ">
+      <div className="text-center mt-6 md:mt-14">
+        {" "}
+        {/* ปรับระยะห่าง */}
+        <p className="text-white text-lg md:text-3xl font-jetbrains-mono-medium">
+          {" "}
+          {/* ปรับขนาดข้อความ */}
           THANK YOU FOR TAKING THE TIME TO EXPLORE MY PORTFOLIO.
         </p>
-        <p className="text-white text-3xl md:text-3xl font-jetbrains-mono-medium   mt-8">
-          I APPRECIATE YOUR INTEREST!
+        <p className="text-white text-lg md:text-3xl font-jetbrains-mono-medium mt-4">
+          {" "}
+          {/* ปรับขนาดข้อความ */}I APPRECIATE YOUR INTEREST!
         </p>
       </div>
     </div>
