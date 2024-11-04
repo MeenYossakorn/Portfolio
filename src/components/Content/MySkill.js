@@ -32,27 +32,21 @@ const MySkills = () => {
 
       if (leftSectionRef.current) observer.observe(leftSectionRef.current);
       if (rightSectionRef.current) observer.observe(rightSectionRef.current);
-
-      return () => {
-        if (leftSectionRef.current) observer.unobserve(leftSectionRef.current);
-        if (rightSectionRef.current)
-          observer.unobserve(rightSectionRef.current);
-      };
     }
   }, []);
 
   return (
     <section id="Skill">
-      <div className="">
+      <div className="items-center">
         <div className=" md:pt-20 bg-transparent text-white  flex items-center justify-center   relative mt-40  relative">
-          <div className="flex flex-col lg:flex-row gap-10 w-full max-w-[1220px]">
+          <div className="flex flex-col lg:flex-row gap-10 w-full max-w-[1220px] justify-start ">
             <div
               ref={leftSectionRef}
               className={`transition-all duration-500 ${
                 isVisible.left ? "slide-in-left" : ""
               }`}
             >
-              <div className="flex flex-col justify-center max-w-md ">
+              <div className="flex flex-col  justify-center max-w-md ">
                 <h2 className="font-roboto-mono text-3xl font-semibold text-white mb-2 text-center lg:text-left">
                   MY SKILL
                 </h2>
@@ -69,7 +63,7 @@ const MySkills = () => {
         </div>
 
         <div className="bg-transparent text-white flex items-center justify-center relative">
-          <div className="flex flex-col lg:flex-row gap-10 w-full  max-w-[1220px] justify-center items-center">
+          <div className="flex flex-col lg:flex-row gap-10 w-full  max-w-[1220px] justify-start items-center">
             <div
               ref={leftSectionRef}
               className={`transition-all duration-500 ${

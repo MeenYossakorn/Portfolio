@@ -25,7 +25,7 @@ const About = () => {
                 </p>
 
                 <div className="flex flex-col md:flex-row items-start mt-4">
-                  <div className="hidden md:flex flex-1 justify-center md:justify-start">
+                  <div className="hidden md:flex flex-1 justify-center md:justify-center">
                     <div className="bg-transparent p-1 w-[300px] h-auto flex items-center justify-center">
                       <img
                         src={meenPhotoshopMacbook}
